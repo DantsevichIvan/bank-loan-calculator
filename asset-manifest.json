@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/bank-loan-calculator/static/css/main.33d56128.chunk.css",
+    "main.js": "/bank-loan-calculator/static/js/main.195c810f.chunk.js",
+    "main.js.map": "/bank-loan-calculator/static/js/main.195c810f.chunk.js.map",
+    "runtime-main.js": "/bank-loan-calculator/static/js/runtime-main.b5eecc13.js",
+    "runtime-main.js.map": "/bank-loan-calculator/static/js/runtime-main.b5eecc13.js.map",
+    "static/js/2.65912663.chunk.js": "/bank-loan-calculator/static/js/2.65912663.chunk.js",
+    "static/js/2.65912663.chunk.js.map": "/bank-loan-calculator/static/js/2.65912663.chunk.js.map",
+    "index.html": "/bank-loan-calculator/index.html",
+    "precache-manifest.d96cbed3b827284a9e76ec010ad2127b.js": "/bank-loan-calculator/precache-manifest.d96cbed3b827284a9e76ec010ad2127b.js",
+    "service-worker.js": "/bank-loan-calculator/service-worker.js",
+    "static/css/main.33d56128.chunk.css.map": "/bank-loan-calculator/static/css/main.33d56128.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b5eecc13.js",
+    "static/js/2.65912663.chunk.js",
+    "static/css/main.33d56128.chunk.css",
+    "static/js/main.195c810f.chunk.js"
+  ]
+}
