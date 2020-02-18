@@ -1,0 +1,17 @@
+//colors
+$dolorColor: #ff000d;
+$belRubColor: #939393;
+
+.resultWrap{
+  font-size: 20px;
+  font-weight: 700;
+  align-self: flex-start;
+  .result{
+    span:first-child{
+      color:$dolorColor;
+    }
+    span:last-child{
+     color: $belRubColor;
+    }
+  }
+}

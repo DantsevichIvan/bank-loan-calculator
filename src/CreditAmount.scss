@@ -1,0 +1,79 @@
+// excess height to improve interactive area / accessibility
+$height: 50px;
+$thumb-height: 28px;
+$track-height: 10px;
+
+// colours
+$upper-color: #b8b8b8;
+$lower-color: #cf271b;
+$thumb-color: #121214;
+$thumb-hover-color: #121214;
+$upper-background: linear-gradient(to bottom, $upper-color, $upper-color) 100%  / 100% $track-height no-repeat transparent;
+$lower-background: linear-gradient(to bottom, $lower-color, $lower-color) 100%  / 100% $track-height no-repeat transparent;
+
+// Webkit cannot style progress so we fake it with a long shadow
+// on the thumb element
+@function webkit-slider-thumb-shadow($i: 1) {
+  $val: #{$i}px 0 0 -#{($thumb-height - $track-height) / 2} #{$upper-color};
+  @if $i == 1 {
+    @for $k from 2 through 4000 {
+      $val: #{$val}, webkit-slider-thumb-shadow($k);
+    }
+  }
+  @return $val;
+}
+
+.wrapper {
+  width: 500px;
+  margin-bottom: 20px;
+
+  .description {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 16px;
+
+    span {
+      color: #ff000d;
+    }
+  }
+
+  .e-range {
+    display: block;
+    appearance: none;
+    width: 100%;
+    margin: 0;
+    height: $height;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: inherit;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+// Webkit
+.e-range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: $height;
+  background: $lower-background;
+}
+
+.e-range::-webkit-slider-thumb {
+  position: relative;
+  appearance: none;
+  height: $thumb-height;
+  width: $thumb-height;
+  background: $thumb-color;
+  border-radius: 100%;
+  border: 0;
+  top: 50%;
+  margin-top: (-$thumb-height/2);
+  box-shadow: webkit-slider-thumb-shadow();
+  transition: background-color 150ms;
+  background: linear-gradient(to top, #161508, #827e7d);
+}
+
+
